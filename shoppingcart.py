@@ -10,6 +10,8 @@ def total_price():
     for item in dict:
         sum+=dict[item]
     print(f"total price is:{sum}")
+
+
 numop=int(input("enter no.of operations"))
 
 for j in range(numop):
