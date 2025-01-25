@@ -10,13 +10,23 @@ def total_price():
     for item in dict:
         sum+=dict[item]
     print(f"total price is:{sum}")
+numop=int(input("enter no.of operations"))
 
-add_items("bread",50)
-add_items("milk",20)
-add_items("chalk",5)
+for j in range(numop):
+     op=input("enter the operation")
+     if(op=="add"):
+        n=int(input("no.of items to add"))
+        for i in range(n):
+            item=input("item")
+            price=int(input("price"))
+            add_items(item,price)
+     elif(op=="view"):
+         view_cart()
 
-view_cart()
+     elif(op=="total price"):
+         total_price()
 
-total_price()
-
-exit()
+     elif(op=="exit"):
+           exit()
+     else:
+         print("invalid")
